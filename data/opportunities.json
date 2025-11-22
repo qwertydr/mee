@@ -1,34 +1,135 @@
 {
   "opportunities": [
-    {
-      "id": 1,
-      "title": "Software Engineering Internship",
-      "description": "Join our dynamic team as a software engineering intern. Work on cutting-edge projects and gain valuable industry experience.",
-      "shortDescription": "Gain hands-on experience in software development with our internship program.",
-      "deadline": "2023-12-15",
-      "category": "Internship",
-      "type": "Technology",
-      "imageUrl": "",
-      "detailsLink": "opportunity-detail.html?id=1",
-      "slug": "software-engineering-internship",
-      "fullDescription": "<p>We are looking for a motivated Software Engineering Intern to join our dynamic team. This position offers the opportunity to work on cutting-edge projects and gain valuable industry experience.</p><h3>Responsibilities:</h3><ul><li>Assist in the development of web applications</li><li>Collaborate with senior developers on software design</li><li>Participate in code reviews and team meetings</li><li>Learn and apply new technologies and frameworks</li></ul><h3>Requirements:</h3><ul><li>Currently pursuing a degree in Computer Science or related field</li><li>Basic knowledge of programming languages such as JavaScript, Python, or Java</li><li>Strong problem-solving skills and attention to detail</li><li>Ability to work both independently and in a team environment</li></ul><h3>What We Offer:</h3><ul><li>Hands-on experience with real projects</li><li>Mentorship from experienced engineers</li><li>Flexible work hours</li><li>Potential for full-time employment after graduation</li></ul>",
-      "applicationProcess": "To apply, please submit your resume and a cover letter explaining why you're interested in this position.",
-      "contactEmail": "careers@example.com"
-    },
-    {
-      "id": 2,
-      "title": "Data Science Scholarship",
-      "description": "Full scholarship for aspiring data scientists. Covers tuition and provides a stipend for living expenses.",
-      "shortDescription": "Full scholarship for data science students with financial need.",
-      "deadline": "2023-11-30",
-      "category": "Scholarship",
-      "type": "Education",
-      "imageUrl": "",
-      "detailsLink": "opportunity-detail.html?id=2",
-      "slug": "data-science-scholarship",
-      "fullDescription": "<p>The Data Science Scholarship program is designed to support talented students pursuing careers in data science and analytics. This full scholarship covers tuition fees and provides a stipend for living expenses.</p><h3>Eligibility Criteria:</h3><ul><li>Must be enrolled in or accepted to a data science or related program</li><li>Demonstrated financial need</li><li>Minimum GPA of 3.5 on a 4.0 scale</li><li>Submission of two letters of recommendation</li></ul><h3>Application Requirements:</h3><ul><li>Completed application form</li><li>Academic transcripts</li><li>Personal statement (500-800 words)</li><li>Two letters of recommendation</li><li>Proof of financial need</li></ul><h3>Selection Process:</h3><p>Applications will be reviewed by our scholarship committee. Shortlisted candidates may be invited for an interview. Winners will be notified by email.</p>",
-      "applicationProcess": "Submit the completed application package by the deadline. Incomplete applications will not be considered.",
-      "contactEmail": "scholarships@example.com"
-    }
+                    {
+                        id: 1,
+                        title: "Software Engineering Internship",
+                        description: "Join our dynamic team as a software engineering intern. Work on cutting-edge projects and gain valuable industry experience.",
+                        shortDescription: "Gain hands-on experience in software development with our internship program.",
+                        deadline: "2023-12-15",
+                        category: "Internship",
+                        type: "Technology",
+                        imageUrl: "",
+                        detailsLink: "?id=1",
+                        slug: "software-engineering-internship",
+                        fullDescription: `<p>We are looking for a motivated Software Engineering Intern to join our dynamic team. This position offers the opportunity to work on cutting-edge projects and gain valuable industry experience.</p>
+                        <h3>Responsibilities:</h3>
+                        <ul>
+                            <li>Assist in the development of web applications</li>
+                            <li>Collaborate with senior developers on software design</li>
+                            <li>Participate in code reviews and team meetings</li>
+                            <li>Learn and apply new technologies and frameworks</li>
+                        </ul>
+                        <h3>Requirements:</h3>
+                        <ul>
+                            <li>Currently pursuing a degree in Computer Science or related field</li>
+                            <li>Basic knowledge of programming languages such as JavaScript, Python, or Java</li>
+                            <li>Strong problem-solving skills and attention to detail</li>
+                            <li>Ability to work both independently and in a team environment</li>
+                        </ul>
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Hands-on experience with real projects</li>
+                            <li>Mentorship from experienced engineers</li>
+                            <li>Flexible work hours</li>
+                            <li>Potential for full-time employment after graduation</li>
+                        </ul>`,
+                        applicationProcess: "To apply, please submit your resume and a cover letter explaining why you're interested in this position.",
+                        contactEmail: "careers@example.com"
+                    },
+                    {
+                        id: 2,
+                        title: "Data Science Scholarship",
+                        description: "Full scholarship for aspiring data scientists. Covers tuition and provides a stipend for living expenses.",
+                        shortDescription: "Full scholarship for data science students with financial need.",
+                        deadline: "2023-11-30",
+                        category: "Scholarship",
+                        type: "Education",
+                        imageUrl: "",
+                        detailsLink: "?id=2",
+                        slug: "data-science-scholarship",
+                        fullDescription: `<p>The Data Science Scholarship program is designed to support talented students pursuing careers in data science and analytics. This full scholarship covers tuition fees and provides a stipend for living expenses.</p>
+                        <h3>Eligibility Criteria:</h3>
+                        <ul>
+                            <li>Must be enrolled in or accepted to a data science or related program</li>
+                            <li>Demonstrated financial need</li>
+                            <li>Minimum GPA of 3.5 on a 4.0 scale</li>
+                            <li>Submission of two letters of recommendation</li>
+                        </ul>
+                        <h3>Application Requirements:</h3>
+                        <ul>
+                            <li>Completed application form</li>
+                            <li>Academic transcripts</li>
+                            <li>Personal statement (500-800 words)</li>
+                            <li>Two letters of recommendation</li>
+                            <li>Proof of financial need</li>
+                        </ul>
+                        <h3>Selection Process:</h3>
+                        <p>Applications will be reviewed by our scholarship committee. Shortlisted candidates may be invited for an interview. Winners will be notified by email.</p>`,
+                        applicationProcess: "Submit the completed application package by the deadline. Incomplete applications will not be considered.",
+                        contactEmail: "scholarships@example.com"
+                    },
+                    {
+                        id: 3,
+                        title: "Marketing Manager Position",
+                        description: "We're looking for an experienced marketing manager to lead our digital marketing campaigns and brand strategy.",
+                        shortDescription: "Lead digital marketing initiatives for a growing company.",
+                        deadline: "2023-12-20",
+                        category: "Job",
+                        type: "Marketing",
+                        imageUrl: "",
+                        detailsLink: "?id=3",
+                        slug: "marketing-manager-position",
+                        fullDescription: `<p>We are seeking an experienced Marketing Manager to lead our digital marketing efforts and brand strategy. The ideal candidate will have a proven track record in developing and executing successful marketing campaigns.</p>
+                        <h3>Key Responsibilities:</h3>
+                        <ul>
+                            <li>Develop and implement comprehensive marketing strategies</li>
+                            <li>Manage digital marketing campaigns across various channels</li>
+                            <li>Analyze market trends and customer insights</li>
+                            <li>Collaborate with cross-functional teams to align marketing efforts</li>
+                            <li>Measure and report on campaign performance</li>
+                        </ul>
+                        <h3>Qualifications:</h3>
+                        <ul>
+                            <li>Bachelor's degree in Marketing, Business, or related field</li>
+                            <li>5+ years of experience in marketing management</li>
+                            <li>Proven experience with digital marketing tools and platforms</li>
+                            <li>Excellent communication and leadership skills</li>
+                        </ul>`,
+                        applicationProcess: "Please submit your resume and portfolio through our online application system.",
+                        contactEmail: "hr@example.com"
+                    },
+                    {
+                        id: 4,
+                        title: "Tech Innovation Conference 2023",
+                        description: "Annual conference bringing together industry leaders, innovators, and tech enthusiasts to discuss the future of technology.",
+                        shortDescription: "Join industry leaders at our annual tech innovation conference.",
+                        deadline: "2023-11-25",
+                        category: "Event",
+                        type: "Technology",
+                        imageUrl: "",
+                        detailsLink: "?id=4",
+                        slug: "tech-innovation-conference-2023",
+                        fullDescription: `<p>The Tech Innovation Conference 2023 is our annual gathering of industry leaders, innovators, and technology enthusiasts. This year's theme is "The Future of Digital Transformation".</p>
+                        <h3>Conference Highlights:</h3>
+                        <ul>
+                            <li>Keynote speeches from industry pioneers</li>
+                            <li>Panel discussions on emerging technologies</li>
+                            <li>Networking opportunities with professionals</li>
+                            <li>Hands-on workshops and demonstrations</li>
+                            <li>Startup showcase and innovation awards</li>
+                        </ul>
+                        <h3>Who Should Attend:</h3>
+                        <ul>
+                            <li>Technology professionals and executives</li>
+                            <li>Startup founders and entrepreneurs</li>
+                            <li>Investors and venture capitalists</li>
+                            <li>Students and academics in technology fields</li>
+                        </ul>
+                        <h3>Registration Information:</h3>
+                        <p>Early bird registration ends on October 15th. Group discounts are available for teams of 5 or more.</p>`,
+                        applicationProcess: "Register through our conference website using the provided registration code.",
+                        contactEmail: "events@example.com"
+                    }
+    
   ]
 }

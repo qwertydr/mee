@@ -3,12 +3,30 @@
   "items": [
     {
       "id": 1,
-      "title": "Featured Opportunity",
-      "description": "Check out this exclusive opportunity available only to ExtraMee members.",
+      "title": "ExtraMee Premium Membership",
+      "description": "Unlock exclusive opportunities, personalized career coaching, and priority application review with our Premium Membership.",
+      "imageUrl": "",
+      "link": "#openModal",
+      "buttonText": "Learn More",
+      "placement": ["sidebar", "detail"]
+    },
+    {
+      "id": 2,
+      "title": "IARCO 2024 Conference",
+      "description": "Join industry leaders at the International Annual Research Conference. Early bird registration now open!",
       "imageUrl": "",
       "link": "#",
-      "buttonText": "Apply Now",
-      "placement": ["sidebar", "detail"]
+      "buttonText": "Register Now",
+      "placement": ["sidebar"]
+    },
+    {
+      "id": 3,
+      "title": "Career Transformation Program",
+      "description": "Our 3-month intensive program helps you pivot to high-growth careers in tech, data, or digital marketing.",
+      "imageUrl": "",
+      "link": "#",
+      "buttonText": "Explore Program",
+      "placement": ["detail"]
     }
   ]
 }

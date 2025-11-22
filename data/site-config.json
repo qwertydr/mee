@@ -1,5 +1,17 @@
 {
   "siteName": "ExtraMee",
   "googleAnalyticsId": "UA-XXXXX-Y",
-  "contactEmail": "contact@extramee.com"
+  "contactEmail": "contact@extramee.com",
+  "socialLinks": {
+    "facebook": "https://facebook.com/extramee",
+    "twitter": "https://twitter.com/extramee",
+    "linkedin": "https://linkedin.com/company/extramee",
+    "instagram": "https://instagram.com/extramee"
+  },
+  "features": {
+    "newsletter": true,
+    "modalPopup": true,
+    "sponsoredContent": true,
+    "ads": true
+  }
 }

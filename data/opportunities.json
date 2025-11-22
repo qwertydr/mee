@@ -1,135 +1,124 @@
 {
   "opportunities": [
-                    {
-                        id: 1,
-                        title: "Software Engineering Internship",
-                        description: "Join our dynamic team as a software engineering intern. Work on cutting-edge projects and gain valuable industry experience.",
-                        shortDescription: "Gain hands-on experience in software development with our internship program.",
-                        deadline: "2023-12-15",
-                        category: "Internship",
-                        type: "Technology",
-                        imageUrl: "",
-                        detailsLink: "?id=1",
-                        slug: "software-engineering-internship",
-                        fullDescription: `<p>We are looking for a motivated Software Engineering Intern to join our dynamic team. This position offers the opportunity to work on cutting-edge projects and gain valuable industry experience.</p>
-                        <h3>Responsibilities:</h3>
-                        <ul>
-                            <li>Assist in the development of web applications</li>
-                            <li>Collaborate with senior developers on software design</li>
-                            <li>Participate in code reviews and team meetings</li>
-                            <li>Learn and apply new technologies and frameworks</li>
-                        </ul>
-                        <h3>Requirements:</h3>
-                        <ul>
-                            <li>Currently pursuing a degree in Computer Science or related field</li>
-                            <li>Basic knowledge of programming languages such as JavaScript, Python, or Java</li>
-                            <li>Strong problem-solving skills and attention to detail</li>
-                            <li>Ability to work both independently and in a team environment</li>
-                        </ul>
-                        <h3>What We Offer:</h3>
-                        <ul>
-                            <li>Hands-on experience with real projects</li>
-                            <li>Mentorship from experienced engineers</li>
-                            <li>Flexible work hours</li>
-                            <li>Potential for full-time employment after graduation</li>
-                        </ul>`,
-                        applicationProcess: "To apply, please submit your resume and a cover letter explaining why you're interested in this position.",
-                        contactEmail: "careers@example.com"
-                    },
-                    {
-                        id: 2,
-                        title: "Data Science Scholarship",
-                        description: "Full scholarship for aspiring data scientists. Covers tuition and provides a stipend for living expenses.",
-                        shortDescription: "Full scholarship for data science students with financial need.",
-                        deadline: "2023-11-30",
-                        category: "Scholarship",
-                        type: "Education",
-                        imageUrl: "",
-                        detailsLink: "?id=2",
-                        slug: "data-science-scholarship",
-                        fullDescription: `<p>The Data Science Scholarship program is designed to support talented students pursuing careers in data science and analytics. This full scholarship covers tuition fees and provides a stipend for living expenses.</p>
-                        <h3>Eligibility Criteria:</h3>
-                        <ul>
-                            <li>Must be enrolled in or accepted to a data science or related program</li>
-                            <li>Demonstrated financial need</li>
-                            <li>Minimum GPA of 3.5 on a 4.0 scale</li>
-                            <li>Submission of two letters of recommendation</li>
-                        </ul>
-                        <h3>Application Requirements:</h3>
-                        <ul>
-                            <li>Completed application form</li>
-                            <li>Academic transcripts</li>
-                            <li>Personal statement (500-800 words)</li>
-                            <li>Two letters of recommendation</li>
-                            <li>Proof of financial need</li>
-                        </ul>
-                        <h3>Selection Process:</h3>
-                        <p>Applications will be reviewed by our scholarship committee. Shortlisted candidates may be invited for an interview. Winners will be notified by email.</p>`,
-                        applicationProcess: "Submit the completed application package by the deadline. Incomplete applications will not be considered.",
-                        contactEmail: "scholarships@example.com"
-                    },
-                    {
-                        id: 3,
-                        title: "Marketing Manager Position",
-                        description: "We're looking for an experienced marketing manager to lead our digital marketing campaigns and brand strategy.",
-                        shortDescription: "Lead digital marketing initiatives for a growing company.",
-                        deadline: "2023-12-20",
-                        category: "Job",
-                        type: "Marketing",
-                        imageUrl: "",
-                        detailsLink: "?id=3",
-                        slug: "marketing-manager-position",
-                        fullDescription: `<p>We are seeking an experienced Marketing Manager to lead our digital marketing efforts and brand strategy. The ideal candidate will have a proven track record in developing and executing successful marketing campaigns.</p>
-                        <h3>Key Responsibilities:</h3>
-                        <ul>
-                            <li>Develop and implement comprehensive marketing strategies</li>
-                            <li>Manage digital marketing campaigns across various channels</li>
-                            <li>Analyze market trends and customer insights</li>
-                            <li>Collaborate with cross-functional teams to align marketing efforts</li>
-                            <li>Measure and report on campaign performance</li>
-                        </ul>
-                        <h3>Qualifications:</h3>
-                        <ul>
-                            <li>Bachelor's degree in Marketing, Business, or related field</li>
-                            <li>5+ years of experience in marketing management</li>
-                            <li>Proven experience with digital marketing tools and platforms</li>
-                            <li>Excellent communication and leadership skills</li>
-                        </ul>`,
-                        applicationProcess: "Please submit your resume and portfolio through our online application system.",
-                        contactEmail: "hr@example.com"
-                    },
-                    {
-                        id: 4,
-                        title: "Tech Innovation Conference 2023",
-                        description: "Annual conference bringing together industry leaders, innovators, and tech enthusiasts to discuss the future of technology.",
-                        shortDescription: "Join industry leaders at our annual tech innovation conference.",
-                        deadline: "2023-11-25",
-                        category: "Event",
-                        type: "Technology",
-                        imageUrl: "",
-                        detailsLink: "?id=4",
-                        slug: "tech-innovation-conference-2023",
-                        fullDescription: `<p>The Tech Innovation Conference 2023 is our annual gathering of industry leaders, innovators, and technology enthusiasts. This year's theme is "The Future of Digital Transformation".</p>
-                        <h3>Conference Highlights:</h3>
-                        <ul>
-                            <li>Keynote speeches from industry pioneers</li>
-                            <li>Panel discussions on emerging technologies</li>
-                            <li>Networking opportunities with professionals</li>
-                            <li>Hands-on workshops and demonstrations</li>
-                            <li>Startup showcase and innovation awards</li>
-                        </ul>
-                        <h3>Who Should Attend:</h3>
-                        <ul>
-                            <li>Technology professionals and executives</li>
-                            <li>Startup founders and entrepreneurs</li>
-                            <li>Investors and venture capitalists</li>
-                            <li>Students and academics in technology fields</li>
-                        </ul>
-                        <h3>Registration Information:</h3>
-                        <p>Early bird registration ends on October 15th. Group discounts are available for teams of 5 or more.</p>`,
-                        applicationProcess: "Register through our conference website using the provided registration code.",
-                        contactEmail: "events@example.com"
-                    }
-    
+    {
+      "id": 1,
+      "title": "Software Engineering Internship",
+      "description": "Join our dynamic team as a software engineering intern. Work on cutting-edge projects and gain valuable industry experience.",
+      "shortDescription": "Gain hands-on experience in software development with our internship program.",
+      "deadline": "2024-12-15",
+      "category": "Internship",
+      "type": "Technology",
+      "imageUrl": "",
+      "detailsLink": "?id=1",
+      "slug": "software-engineering-internship",
+      "fullDescription": "<p>We are looking for a motivated Software Engineering Intern to join our dynamic team. This position offers the opportunity to work on cutting-edge projects and gain valuable industry experience.</p><h3>Responsibilities:</h3><ul><li>Assist in the development of web applications</li><li>Collaborate with senior developers on software design</li><li>Participate in code reviews and team meetings</li><li>Learn and apply new technologies and frameworks</li></ul><h3>Requirements:</h3><ul><li>Currently pursuing a degree in Computer Science or related field</li><li>Basic knowledge of programming languages such as JavaScript, Python, or Java</li><li>Strong problem-solving skills and attention to detail</li><li>Ability to work both independently and in a team environment</li></ul><h3>What We Offer:</h3><ul><li>Hands-on experience with real projects</li><li>Mentorship from experienced engineers</li><li>Flexible work hours</li><li>Potential for full-time employment after graduation</li></ul>",
+      "applicationProcess": "To apply, please submit your resume and a cover letter explaining why you're interested in this position.",
+      "contactEmail": "careers@example.com"
+    },
+    {
+      "id": 2,
+      "title": "Data Science Scholarship",
+      "description": "Full scholarship for aspiring data scientists. Covers tuition and provides a stipend for living expenses.",
+      "shortDescription": "Full scholarship for data science students with financial need.",
+      "deadline": "2024-11-30",
+      "category": "Scholarship",
+      "type": "Education",
+      "imageUrl": "",
+      "detailsLink": "?id=2",
+      "slug": "data-science-scholarship",
+      "fullDescription": "<p>The Data Science Scholarship program is designed to support talented students pursuing careers in data science and analytics. This full scholarship covers tuition fees and provides a stipend for living expenses.</p><h3>Eligibility Criteria:</h3><ul><li>Must be enrolled in or accepted to a data science or related program</li><li>Demonstrated financial need</li><li>Minimum GPA of 3.5 on a 4.0 scale</li><li>Submission of two letters of recommendation</li></ul><h3>Application Requirements:</h3><ul><li>Completed application form</li><li>Academic transcripts</li><li>Personal statement (500-800 words)</li><li>Two letters of recommendation</li><li>Proof of financial need</li></ul><h3>Selection Process:</h3><p>Applications will be reviewed by our scholarship committee. Shortlisted candidates may be invited for an interview. Winners will be notified by email.</p>",
+      "applicationProcess": "Submit the completed application package by the deadline. Incomplete applications will not be considered.",
+      "contactEmail": "scholarships@example.com"
+    },
+    {
+      "id": 3,
+      "title": "Marketing Manager Position",
+      "description": "We're looking for an experienced marketing manager to lead our digital marketing campaigns and brand strategy.",
+      "shortDescription": "Lead digital marketing initiatives for a growing company.",
+      "deadline": "2024-12-20",
+      "category": "Job",
+      "type": "Marketing",
+      "imageUrl": "",
+      "detailsLink": "?id=3",
+      "slug": "marketing-manager-position",
+      "fullDescription": "<p>We are seeking an experienced Marketing Manager to lead our digital marketing efforts and brand strategy. The ideal candidate will have a proven track record in developing and executing successful marketing campaigns.</p><h3>Key Responsibilities:</h3><ul><li>Develop and implement comprehensive marketing strategies</li><li>Manage digital marketing campaigns across various channels</li><li>Analyze market trends and customer insights</li><li>Collaborate with cross-functional teams to align marketing efforts</li><li>Measure and report on campaign performance</li></ul><h3>Qualifications:</h3><ul><li>Bachelor's degree in Marketing, Business, or related field</li><li>5+ years of experience in marketing management</li><li>Proven experience with digital marketing tools and platforms</li><li>Excellent communication and leadership skills</li></ul>",
+      "applicationProcess": "Please submit your resume and portfolio through our online application system.",
+      "contactEmail": "hr@example.com"
+    },
+    {
+      "id": 4,
+      "title": "Tech Innovation Conference 2024",
+      "description": "Annual conference bringing together industry leaders, innovators, and tech enthusiasts to discuss the future of technology.",
+      "shortDescription": "Join industry leaders at our annual tech innovation conference.",
+      "deadline": "2024-11-25",
+      "category": "Event",
+      "type": "Technology",
+      "imageUrl": "",
+      "detailsLink": "?id=4",
+      "slug": "tech-innovation-conference-2024",
+      "fullDescription": "<p>The Tech Innovation Conference 2024 is our annual gathering of industry leaders, innovators, and technology enthusiasts. This year's theme is \"The Future of Digital Transformation\".</p><h3>Conference Highlights:</h3><ul><li>Keynote speeches from industry pioneers</li><li>Panel discussions on emerging technologies</li><li>Networking opportunities with professionals</li><li>Hands-on workshops and demonstrations</li><li>Startup showcase and innovation awards</li></ul><h3>Who Should Attend:</h3><ul><li>Technology professionals and executives</li><li>Startup founders and entrepreneurs</li><li>Investors and venture capitalists</li><li>Students and academics in technology fields</li></ul><h3>Registration Information:</h3><p>Early bird registration ends on October 15th. Group discounts are available for teams of 5 or more.</p>",
+      "applicationProcess": "Register through our conference website using the provided registration code.",
+      "contactEmail": "events@example.com"
+    },
+    {
+      "id": 5,
+      "title": "Graphic Design Freelance Opportunity",
+      "description": "Freelance graphic design position for creating marketing materials and social media content.",
+      "shortDescription": "Create compelling visual content for our marketing campaigns.",
+      "deadline": "2024-12-10",
+      "category": "Freelance",
+      "type": "Design",
+      "imageUrl": "",
+      "detailsLink": "?id=5",
+      "slug": "graphic-design-freelance-opportunity",
+      "fullDescription": "<p>We are seeking a talented freelance graphic designer to create compelling visual content for our marketing campaigns and social media channels. This is a remote position with flexible hours.</p><h3>Project Scope:</h3><ul><li>Design marketing materials including brochures, flyers, and banners</li><li>Create engaging social media graphics and posts</li><li>Develop visual identity elements for new campaigns</li><li>Collaborate with the marketing team on creative concepts</li></ul><h3>Requirements:</h3><ul><li>Proven experience in graphic design</li><li>Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li><li>Strong portfolio showcasing design skills</li><li>Ability to work independently and meet deadlines</li><li>Excellent communication skills</li></ul><h3>Compensation:</h3><p>Competitive hourly rate based on experience. Project-based pricing also available.</p>",
+      "applicationProcess": "Submit your portfolio and resume along with your proposed hourly rate.",
+      "contactEmail": "design@example.com"
+    },
+    {
+      "id": 6,
+      "title": "Research Assistant in Biology",
+      "description": "Assist with cutting-edge research in molecular biology. Perfect for recent graduates looking to build research experience.",
+      "shortDescription": "Participate in groundbreaking molecular biology research.",
+      "deadline": "2024-12-05",
+      "category": "Research",
+      "type": "Science",
+      "imageUrl": "",
+      "detailsLink": "?id=6",
+      "slug": "research-assistant-in-biology",
+      "fullDescription": "<p>Join our research team as a Research Assistant in Molecular Biology. This position offers the opportunity to work on groundbreaking research projects in a state-of-the-art laboratory environment.</p><h3>Research Focus:</h3><ul><li>Gene expression analysis</li><li>Protein structure and function</li><li>Cellular signaling pathways</li><li>Drug discovery and development</li></ul><h3>Responsibilities:</h3><ul><li>Conduct laboratory experiments and procedures</li><li>Collect and analyze research data</li><li>Maintain detailed laboratory records</li><li>Assist in preparing research papers and presentations</li><li>Collaborate with other researchers and team members</li></ul><h3>Qualifications:</h3><ul><li>Bachelor's degree in Biology, Biochemistry, or related field</li><li>Laboratory experience preferred</li><li>Strong analytical and problem-solving skills</li><li>Attention to detail and accuracy</li><li>Ability to work both independently and collaboratively</li></ul>",
+      "applicationProcess": "Submit your CV, academic transcripts, and a letter of interest.",
+      "contactEmail": "research@example.com"
+    },
+    {
+      "id": 7,
+      "title": "Business Development Fellowship",
+      "description": "One-year fellowship program for recent graduates interested in business development and sales.",
+      "shortDescription": "Develop business development skills in a fast-paced environment.",
+      "deadline": "2024-10-31",
+      "category": "Fellowship",
+      "type": "Business",
+      "imageUrl": "",
+      "detailsLink": "?id=7",
+      "slug": "business-development-fellowship",
+      "fullDescription": "<p>The Business Development Fellowship is a one-year program designed for recent graduates who want to build a career in business development, sales, and strategic partnerships.</p><h3>Program Highlights:</h3><ul><li>Comprehensive training in sales techniques and strategies</li><li>Mentorship from experienced business development professionals</li><li>Exposure to various industries and market segments</li><li>Opportunity to work on real client projects</li><li>Networking events with industry leaders</li></ul><h3>Learning Objectives:</h3><ul><li>Develop effective sales and negotiation skills</li><li>Learn to identify and pursue new business opportunities</li><li>Understand market analysis and competitive intelligence</li><li>Build relationship management capabilities</li><li>Gain experience in contract negotiation and closing deals</li></ul><h3>Eligibility:</h3><ul><li>Bachelor's degree in Business, Marketing, or related field</li><li>Strong communication and interpersonal skills</li><li>Demonstrated interest in business development</li><li>Ability to work in a fast-paced, dynamic environment</li></ul>",
+      "applicationProcess": "Complete the online application and participate in two rounds of interviews.",
+      "contactEmail": "fellowships@example.com"
+    },
+    {
+      "id": 8,
+      "title": "Environmental Sustainability Grant",
+      "description": "Funding opportunity for projects focused on environmental sustainability and conservation.",
+      "shortDescription": "Financial support for environmental sustainability initiatives.",
+      "deadline": "2024-11-15",
+      "category": "Grant",
+      "type": "Environment",
+      "imageUrl": "",
+      "detailsLink": "?id=8",
+      "slug": "environmental-sustainability-grant",
+      "fullDescription": "<p>The Environmental Sustainability Grant provides financial support to individuals and organizations working on projects that promote environmental conservation and sustainable practices.</p><h3>Funding Areas:</h3><ul><li>Renewable energy initiatives</li><li>Waste reduction and recycling programs</li><li>Conservation of natural habitats</li><li>Sustainable agriculture practices</li><li>Environmental education and awareness</li></ul><h3>Eligibility Criteria:</h3><ul><li>Non-profit organizations, educational institutions, or individuals</li><li>Projects must demonstrate clear environmental benefits</li><li>Proposed activities must be completed within 12 months</li><li>Applicants must provide a detailed budget and timeline</li><li>Preference given to projects with community involvement</li></ul><h3>Grant Amount:</h3><p>Grants range from $5,000 to $50,000 depending on the scope and impact of the project.</p><h3>Application Requirements:</h3><ul><li>Completed application form</li><li>Detailed project proposal</li><li>Budget breakdown</li><li>Timeline of activities</li><li>Letters of support (if applicable)</li></ul>",
+      "applicationProcess": "Submit the complete application package through our online portal.",
+      "contactEmail": "grants@example.com"
+    }
   ]
 }

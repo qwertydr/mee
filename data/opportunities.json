@@ -1,0 +1,34 @@
+{
+  "opportunities": [
+    {
+      "id": 1,
+      "title": "Software Engineering Internship",
+      "description": "Join our dynamic team as a software engineering intern. Work on cutting-edge projects and gain valuable industry experience.",
+      "shortDescription": "Gain hands-on experience in software development with our internship program.",
+      "deadline": "2023-12-15",
+      "category": "Internship",
+      "type": "Technology",
+      "imageUrl": "",
+      "detailsLink": "opportunity-detail.html?id=1",
+      "slug": "software-engineering-internship",
+      "fullDescription": "<p>We are looking for a motivated Software Engineering Intern to join our dynamic team. This position offers the opportunity to work on cutting-edge projects and gain valuable industry experience.</p><h3>Responsibilities:</h3><ul><li>Assist in the development of web applications</li><li>Collaborate with senior developers on software design</li><li>Participate in code reviews and team meetings</li><li>Learn and apply new technologies and frameworks</li></ul><h3>Requirements:</h3><ul><li>Currently pursuing a degree in Computer Science or related field</li><li>Basic knowledge of programming languages such as JavaScript, Python, or Java</li><li>Strong problem-solving skills and attention to detail</li><li>Ability to work both independently and in a team environment</li></ul><h3>What We Offer:</h3><ul><li>Hands-on experience with real projects</li><li>Mentorship from experienced engineers</li><li>Flexible work hours</li><li>Potential for full-time employment after graduation</li></ul>",
+      "applicationProcess": "To apply, please submit your resume and a cover letter explaining why you're interested in this position.",
+      "contactEmail": "careers@example.com"
+    },
+    {
+      "id": 2,
+      "title": "Data Science Scholarship",
+      "description": "Full scholarship for aspiring data scientists. Covers tuition and provides a stipend for living expenses.",
+      "shortDescription": "Full scholarship for data science students with financial need.",
+      "deadline": "2023-11-30",
+      "category": "Scholarship",
+      "type": "Education",
+      "imageUrl": "",
+      "detailsLink": "opportunity-detail.html?id=2",
+      "slug": "data-science-scholarship",
+      "fullDescription": "<p>The Data Science Scholarship program is designed to support talented students pursuing careers in data science and analytics. This full scholarship covers tuition fees and provides a stipend for living expenses.</p><h3>Eligibility Criteria:</h3><ul><li>Must be enrolled in or accepted to a data science or related program</li><li>Demonstrated financial need</li><li>Minimum GPA of 3.5 on a 4.0 scale</li><li>Submission of two letters of recommendation</li></ul><h3>Application Requirements:</h3><ul><li>Completed application form</li><li>Academic transcripts</li><li>Personal statement (500-800 words)</li><li>Two letters of recommendation</li><li>Proof of financial need</li></ul><h3>Selection Process:</h3><p>Applications will be reviewed by our scholarship committee. Shortlisted candidates may be invited for an interview. Winners will be notified by email.</p>",
+      "applicationProcess": "Submit the completed application package by the deadline. Incomplete applications will not be considered.",
+      "contactEmail": "scholarships@example.com"
+    }
+  ]
+}

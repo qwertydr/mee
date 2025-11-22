@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "items": [
+    {
+      "id": 1,
+      "title": "Featured Opportunity",
+      "description": "Check out this exclusive opportunity available only to ExtraMee members.",
+      "imageUrl": "",
+      "link": "#",
+      "buttonText": "Apply Now",
+      "placement": ["sidebar", "detail"]
+    }
+  ]
+}

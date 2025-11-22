@@ -50,21 +50,21 @@
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 4px;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             text-align: center;
             border: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .btn-primary {
@@ -260,6 +260,14 @@
             padding: 15px 0;
             text-align: center;
             border-bottom: 1px solid var(--gray-medium);
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-ad.hidden {
+            display: none;
         }
 
         .banner-ad img {
@@ -275,6 +283,10 @@
             margin-bottom: 30px;
             box-shadow: var(--shadow);
             text-align: center;
+        }
+
+        .sidebar-ad.hidden {
+            display: none;
         }
 
         .sidebar-ad img {
@@ -354,19 +366,19 @@
 
         .main-content {
             display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 40px;
+            grid-template-columns: 250px 1fr 250px;
+            gap: 30px;
         }
 
         .opportunities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .opportunity-card {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -378,7 +390,7 @@
         }
 
         .opportunity-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
         }
 
@@ -390,20 +402,20 @@
             color: var(--blue-primary);
             padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 600;
             z-index: 2;
         }
 
         .card-image {
-            height: 180px;
+            height: 150px;
             background-color: var(--blue-primary);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-align: center;
             padding: 15px;
             background-size: cover;
@@ -422,15 +434,15 @@
         }
 
         .card-content {
-            padding: 25px;
+            padding: 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
         .card-title {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             color: var(--blue-primary);
             font-weight: 700;
             line-height: 1.3;
@@ -438,16 +450,17 @@
 
         .card-description {
             color: var(--gray-dark);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             flex-grow: 1;
             line-height: 1.5;
+            font-size: 0.9rem;
         }
 
         .card-meta {
             display: flex;
             justify-content: space-between;
             margin-top: auto;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--gray-dark);
             border-top: 1px solid var(--gray-medium);
             padding-top: 15px;
@@ -459,7 +472,7 @@
         }
 
         .card-link {
-            margin-top: 20px;
+            margin-top: 15px;
             text-align: center;
         }
 
@@ -485,6 +498,7 @@
         /* Opportunity Detail Page */
         .opportunity-detail {
             padding: 60px 0;
+            display: none;
         }
 
         .detail-container {
@@ -577,6 +591,10 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+        }
+
+        .ad-unit.hidden {
+            display: none;
         }
 
         .ad-label {
@@ -692,6 +710,45 @@
 
         .footer-bottom-links a:hover {
             color: var(--gold-primary);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            background-color: var(--gray-light);
+            margin-bottom: 40px;
+            display: none;
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin: 0 10px;
+            color: var(--gray-dark);
+        }
+
+        .breadcrumb a {
+            color: var(--blue-primary);
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Back to Home Button */
+        .back-to-home {
+            margin-bottom: 30px;
         }
 
         /* Modal Styles */
@@ -821,40 +878,13 @@
             border: 1px solid #f5c6cb;
         }
 
-        /* Breadcrumb */
-        .breadcrumb {
-            padding: 20px 0;
-            background-color: var(--gray-light);
-            margin-bottom: 40px;
-        }
-
-        .breadcrumb ol {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-        }
-
-        .breadcrumb li {
-            display: flex;
-            align-items: center;
-        }
-
-        .breadcrumb li:not(:last-child)::after {
-            content: '/';
-            margin: 0 10px;
-            color: var(--gray-dark);
-        }
-
-        .breadcrumb a {
-            color: var(--blue-primary);
-            transition: var(--transition);
-        }
-
-        .breadcrumb a:hover {
-            color: var(--gold-primary);
-        }
-
         /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 200px 1fr 200px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .main-content, .detail-container {
                 grid-template-columns: 1fr;
@@ -862,6 +892,9 @@
             
             .sidebar {
                 order: -1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
             }
         }
 
@@ -899,11 +932,15 @@
             }
 
             .opportunities-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
 
             .detail-title {
                 font-size: 2rem;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
             }
 
             .footer-content {
@@ -955,7 +992,7 @@
             <div class="logo">ExtraMee</div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="nav-home">Home</a></li>
                     <li><a href="#opportunities">Opportunities</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact Us</a></li>
@@ -967,48 +1004,82 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1 class="fade-in">Discover Your Next Opportunity</h1>
-            <p class="fade-in">Find jobs, scholarships, internships, and events all in one place. Your future starts here.</p>
-            <a href="#opportunities" class="btn btn-primary fade-in">Explore Opportunities</a>
-        </div>
-    </section>
-
-    <!-- Banner Ad Below Hero -->
-    <div class="banner-ad" id="hero-banner-ad">
-        <!-- Banner ad will be loaded dynamically -->
-    </div>
-
-    <!-- Search and Filter Section -->
-    <section class="search-filter">
-        <div class="container">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search opportunities by title, description, or category...">
+    <!-- Home View -->
+    <div id="home-view">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <h1 class="fade-in">Discover Your Next Opportunity</h1>
+                <p class="fade-in">Find jobs, scholarships, internships, and events all in one place. Your future starts here.</p>
+                <a href="#opportunities" class="btn btn-primary fade-in">Explore Opportunities</a>
             </div>
-            <div class="tags-container" id="tags-container">
-                <!-- Tags will be dynamically generated here -->
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Opportunities Section -->
-    <section class="opportunities" id="opportunities">
-        <div class="container">
-            <h2 class="section-title">Available Opportunities</h2>
-            <div class="main-content">
-                <div class="opportunities-content">
-                    <div class="opportunities-grid" id="opportunities-grid">
-                        <!-- Opportunity cards will be dynamically generated here -->
+        <!-- Banner Ad Below Hero -->
+        <div class="banner-ad" id="hero-banner-ad">
+            <!-- Banner ad will be loaded dynamically -->
+        </div>
+
+        <!-- Search and Filter Section -->
+        <section class="search-filter">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search opportunities by title, description, or category...">
+                </div>
+                <div class="tags-container" id="tags-container">
+                    <!-- Tags will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Opportunities Section -->
+        <section class="opportunities" id="opportunities">
+            <div class="container">
+                <h2 class="section-title">Available Opportunities</h2>
+                <div class="main-content">
+                    <div class="sidebar sidebar-left" id="sidebar-left">
+                        <!-- Left sidebar ads will be loaded dynamically -->
+                    </div>
+                    <div class="opportunities-content">
+                        <div class="opportunities-grid" id="opportunities-grid">
+                            <!-- Opportunity cards will be dynamically generated here -->
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-right" id="sidebar-right">
+                        <!-- Right sidebar ads will be loaded dynamically -->
                     </div>
                 </div>
-                <div class="sidebar" id="sidebar">
-                    <!-- Sidebar ads will be loaded dynamically -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Detail View -->
+    <div id="detail-view" class="opportunity-detail">
+        <div class="breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="#" class="nav-home">Home</a></li>
+                    <li><a href="#opportunities">Opportunities</a></li>
+                    <li id="breadcrumb-opportunity-name">Opportunity Details</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="back-to-home">
+                <a href="#" class="btn btn-outline nav-home"><i class="fas fa-arrow-left"></i> Back to Opportunities</a>
+            </div>
+            
+            <div class="detail-container">
+                <div class="detail-content" id="detail-content">
+                    <!-- Opportunity details will be loaded dynamically here -->
+                </div>
+                <div class="detail-sidebar" id="detail-sidebar">
+                    <!-- Detail page sidebar ads will be loaded dynamically -->
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer id="contact">
@@ -1027,7 +1098,7 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#" class="nav-home">Home</a></li>
                         <li><a href="#opportunities">Opportunities</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#contact">Contact Us</a></li>
@@ -1076,199 +1147,7 @@
                         <option value="" disabled selected>Select Country</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belarus">Belarus</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Belize">Belize</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                        <option value="Botswana">Botswana</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Brunei">Brunei</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="Burkina Faso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="Côte d'Ivoire">Côte d'Ivoire</option>
-                        <option value="Cabo Verde">Cabo Verde</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Cameroon">Cameroon</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Central African Republic">Central African Republic</option>
-                        <option value="Chad">Chad</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Comoros">Comoros</option>
-                        <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Croatia">Croatia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Cyprus">Cyprus</option>
-                        <option value="Czechia (Czech Republic)">Czechia (Czech Republic)</option>
-                        <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
-                        <option value="Denmark">Denmark</option>
-                        <option value="Djibouti">Djibouti</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Dominican Republic">Dominican Republic</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Equatorial Guinea">Equatorial Guinea</option>
-                        <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Eswatini">Eswatini</option>
-                        <option value="Ethiopia">Ethiopia</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="Finland">Finland</option>
-                        <option value="France">France</option>
-                        <option value="Gabon">Gabon</option>
-                        <option value="Gambia">Gambia</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Greece">Greece</option>
-                        <option value="Grenada">Grenada</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Guinea">Guinea</option>
-                        <option value="Guinea-Bissau">Guinea-Bissau</option>
-                        <option value="Guyana">Guyana</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Holy See">Holy See</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Hungary">Hungary</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Iraq">Iraq</option>
-                        <option value="Ireland">Ireland</option>
-                        <option value="Israel">Israel</option>
-                        <option value="Italy">Italy</option>
-                        <option value="Jamaica">Jamaica</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Jordan">Jordan</option>
-                        <option value="Kazakhstan">Kazakhstan</option>
-                        <option value="Kenya">Kenya</option>
-                        <option value="Kiribati">Kiribati</option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                        <option value="Laos">Laos</option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="Lesotho">Lesotho</option>
-                        <option value="Liberia">Liberia</option>
-                        <option value="Libya">Libya</option>
-                        <option value="Liechtenstein">Liechtenstein</option>
-                        <option value="Lithuania">Lithuania</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Madagascar">Madagascar</option>
-                        <option value="Malawi">Malawi</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Mali">Mali</option>
-                        <option value="Malta">Malta</option>
-                        <option value="Marshall Islands">Marshall Islands</option>
-                        <option value="Mauritania">Mauritania</option>
-                        <option value="Mauritius">Mauritius</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Micronesia">Micronesia</option>
-                        <option value="Moldova">Moldova</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montenegro">Montenegro</option>
-                        <option value="Morocco">Morocco</option>
-                        <option value="Mozambique">Mozambique</option>
-                        <option value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</option>
-                        <option value="Namibia">Namibia</option>
-                        <option value="Nauru">Nauru</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="Netherlands">Netherlands</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Nicaragua">Nicaragua</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="North Korea">North Korea</option>
-                        <option value="North Macedonia">North Macedonia</option>
-                        <option value="Norway">Norway</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palau">Palau</option>
-                        <option value="Palestine State">Palestine</option>
-                        <option value="Panama">Panama</option>
-                        <option value="Papua New Guinea">Papua New Guinea</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Philippines">Philippines</option>
-                        <option value="Poland">Poland</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="Romania">Romania</option>
-                        <option value="Russia">Russia</option>
-                        <option value="Rwanda">Rwanda</option>
-                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                        <option value="Saint Lucia">Saint Lucia</option>
-                        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="San Marino">San Marino</option>
-                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                        <option value="Saudi Arabia">Saudi Arabia</option>
-                        <option value="Senegal">Senegal</option>
-                        <option value="Serbia">Serbia</option>
-                        <option value="Seychelles">Seychelles</option>
-                        <option value="Sierra Leone">Sierra Leone</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Slovakia">Slovakia</option>
-                        <option value="Slovenia">Slovenia</option>
-                        <option value="Solomon Islands">Solomon Islands</option>
-                        <option value="Somalia">Somalia</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="South Korea">South Korea</option>
-                        <option value="South Sudan">South Sudan</option>
-                        <option value="Spain">Spain</option>
-                        <option value="Sri Lanka">Sri Lanka</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Suriname">Suriname</option>
-                        <option value="Sweden">Sweden</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Syria">Syria</option>
-                        <option value="Tajikistan">Tajikistan</option>
-                        <option value="Tanzania">Tanzania</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Timor-Leste">Timor-Leste</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                        <option value="Tunisia">Tunisia</option>
-                        <option value="Turkey">Turkey</option>
-                        <option value="Turkmenistan">Turkmenistan</option>
-                        <option value="Tuvalu">Tuvalu</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="United Arab Emirates">United Arab Emirates</option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="United States of America">United States of America</option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Uzbekistan">Uzbekistan</option>
-                        <option value="Vanuatu">Vanuatu</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
+                        <!-- Other countries would be here -->
                     </select>
                     <button type="submit">Subscribe</button>
                 </form>
@@ -1276,18 +1155,6 @@
             </center>
         </div>
     </div>
-
-    <!-- Google Analytics -->
-    <script>
-        // Google Analytics tracking code
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        // This will be set from site-config.json
-        let gaTrackingId = 'UA-XXXXX-Y';
-    </script>
 
     <script>
         // Configuration URLs - These can be changed to point to different JSON files
@@ -1297,6 +1164,9 @@
         const SITE_CONFIG_URL = 'data/site-config.json';
 
         // DOM Elements
+        const homeView = document.getElementById('home-view');
+        const detailView = document.getElementById('detail-view');
+        const breadcrumb = document.querySelector('.breadcrumb');
         const opportunitiesGrid = document.getElementById('opportunities-grid');
         const tagsContainer = document.getElementById('tags-container');
         const searchInput = document.querySelector('.search-input');
@@ -1306,8 +1176,13 @@
         const footerForm = document.querySelector('form[name="footer-subscription-form"]');
         const modalMessage = document.getElementById('subsid');
         const footerMessage = document.getElementById('footer-subscribe-message');
-        const sidebar = document.getElementById('sidebar');
+        const sidebarLeft = document.getElementById('sidebar-left');
+        const sidebarRight = document.getElementById('sidebar-right');
         const heroBannerAd = document.getElementById('hero-banner-ad');
+        const detailContent = document.getElementById('detail-content');
+        const detailSidebar = document.getElementById('detail-sidebar');
+        const breadcrumbOpportunityName = document.getElementById('breadcrumb-opportunity-name');
+        const navHomeLinks = document.querySelectorAll('.nav-home');
 
         // Global data
         let opportunitiesData = [];
@@ -1324,16 +1199,15 @@
                 await loadConfigData();
                 
                 // Set up the page based on the current URL
-                const path = window.location.pathname;
-                if (path.includes('opportunity-detail.html')) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const opportunityId = urlParams.get('id');
+                
+                if (opportunityId) {
                     // We're on a detail page
-                    await loadOpportunityDetail();
+                    showDetailView(opportunityId);
                 } else {
                     // We're on the home page
-                    displayOpportunities(filteredOpportunities);
-                    generateTags();
-                    loadAds();
-                    loadSponsoredContent();
+                    showHomeView();
                 }
                 
                 setupEventListeners();
@@ -1365,10 +1239,12 @@
                 siteConfig = await siteResponse.json();
 
                 // Set Google Analytics ID
-                if (siteConfig.googleAnalyticsId) {
-                    gaTrackingId = siteConfig.googleAnalyticsId;
-                    ga('create', gaTrackingId, 'auto');
-                    ga('send', 'pageview');
+                if (siteConfig.googleAnalyticsId && siteConfig.googleAnalyticsId !== 'UA-XXXXX-Y') {
+                    // Initialize Google Analytics
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', siteConfig.googleAnalyticsId);
                 }
             } catch (error) {
                 console.error('Error loading configuration data:', error);
@@ -1390,7 +1266,7 @@
                         category: "Internship",
                         type: "Technology",
                         imageUrl: "",
-                        detailsLink: "opportunity-detail.html?id=1",
+                        detailsLink: "?id=1",
                         slug: "software-engineering-internship",
                         fullDescription: `<p>We are looking for a motivated Software Engineering Intern to join our dynamic team. This position offers the opportunity to work on cutting-edge projects and gain valuable industry experience.</p>
                         <h3>Responsibilities:</h3>
@@ -1426,7 +1302,7 @@
                         category: "Scholarship",
                         type: "Education",
                         imageUrl: "",
-                        detailsLink: "opportunity-detail.html?id=2",
+                        detailsLink: "?id=2",
                         slug: "data-science-scholarship",
                         fullDescription: `<p>The Data Science Scholarship program is designed to support talented students pursuing careers in data science and analytics. This full scholarship covers tuition fees and provides a stipend for living expenses.</p>
                         <h3>Eligibility Criteria:</h3>
@@ -1448,6 +1324,68 @@
                         <p>Applications will be reviewed by our scholarship committee. Shortlisted candidates may be invited for an interview. Winners will be notified by email.</p>`,
                         applicationProcess: "Submit the completed application package by the deadline. Incomplete applications will not be considered.",
                         contactEmail: "scholarships@example.com"
+                    },
+                    {
+                        id: 3,
+                        title: "Marketing Manager Position",
+                        description: "We're looking for an experienced marketing manager to lead our digital marketing campaigns and brand strategy.",
+                        shortDescription: "Lead digital marketing initiatives for a growing company.",
+                        deadline: "2023-12-20",
+                        category: "Job",
+                        type: "Marketing",
+                        imageUrl: "",
+                        detailsLink: "?id=3",
+                        slug: "marketing-manager-position",
+                        fullDescription: `<p>We are seeking an experienced Marketing Manager to lead our digital marketing efforts and brand strategy. The ideal candidate will have a proven track record in developing and executing successful marketing campaigns.</p>
+                        <h3>Key Responsibilities:</h3>
+                        <ul>
+                            <li>Develop and implement comprehensive marketing strategies</li>
+                            <li>Manage digital marketing campaigns across various channels</li>
+                            <li>Analyze market trends and customer insights</li>
+                            <li>Collaborate with cross-functional teams to align marketing efforts</li>
+                            <li>Measure and report on campaign performance</li>
+                        </ul>
+                        <h3>Qualifications:</h3>
+                        <ul>
+                            <li>Bachelor's degree in Marketing, Business, or related field</li>
+                            <li>5+ years of experience in marketing management</li>
+                            <li>Proven experience with digital marketing tools and platforms</li>
+                            <li>Excellent communication and leadership skills</li>
+                        </ul>`,
+                        applicationProcess: "Please submit your resume and portfolio through our online application system.",
+                        contactEmail: "hr@example.com"
+                    },
+                    {
+                        id: 4,
+                        title: "Tech Innovation Conference 2023",
+                        description: "Annual conference bringing together industry leaders, innovators, and tech enthusiasts to discuss the future of technology.",
+                        shortDescription: "Join industry leaders at our annual tech innovation conference.",
+                        deadline: "2023-11-25",
+                        category: "Event",
+                        type: "Technology",
+                        imageUrl: "",
+                        detailsLink: "?id=4",
+                        slug: "tech-innovation-conference-2023",
+                        fullDescription: `<p>The Tech Innovation Conference 2023 is our annual gathering of industry leaders, innovators, and technology enthusiasts. This year's theme is "The Future of Digital Transformation".</p>
+                        <h3>Conference Highlights:</h3>
+                        <ul>
+                            <li>Keynote speeches from industry pioneers</li>
+                            <li>Panel discussions on emerging technologies</li>
+                            <li>Networking opportunities with professionals</li>
+                            <li>Hands-on workshops and demonstrations</li>
+                            <li>Startup showcase and innovation awards</li>
+                        </ul>
+                        <h3>Who Should Attend:</h3>
+                        <ul>
+                            <li>Technology professionals and executives</li>
+                            <li>Startup founders and entrepreneurs</li>
+                            <li>Investors and venture capitalists</li>
+                            <li>Students and academics in technology fields</li>
+                        </ul>
+                        <h3>Registration Information:</h3>
+                        <p>Early bird registration ends on October 15th. Group discounts are available for teams of 5 or more.</p>`,
+                        applicationProcess: "Register through our conference website using the provided registration code.",
+                        contactEmail: "events@example.com"
                     }
                 ]
             };
@@ -1463,11 +1401,11 @@
                             <p>Ad ID: hero-banner-001</p>
                         </div>`
                     },
-                    sidebar: {
+                    sidebarLeft: {
                         enabled: true,
                         ads: [
                             {
-                                id: "sidebar-ad-1",
+                                id: "sidebar-left-ad-1",
                                 code: `<div class="sidebar-ad">
                                     <h3>Premium Career Services</h3>
                                     <p>Get personalized career coaching and resume reviews from industry experts.</p>
@@ -1475,11 +1413,32 @@
                                 </div>`
                             },
                             {
-                                id: "sidebar-ad-2",
+                                id: "sidebar-left-ad-2",
                                 code: `<div class="sidebar-ad">
                                     <h3>Online Courses</h3>
                                     <p>Enhance your skills with our curated selection of online courses.</p>
                                     <a href="#" class="btn btn-primary">Browse Courses</a>
+                                </div>`
+                            }
+                        ]
+                    },
+                    sidebarRight: {
+                        enabled: true,
+                        ads: [
+                            {
+                                id: "sidebar-right-ad-1",
+                                code: `<div class="sidebar-ad">
+                                    <h3>Job Alerts</h3>
+                                    <p>Get notified when new opportunities matching your criteria are posted.</p>
+                                    <a href="#" class="btn btn-primary">Set Up Alerts</a>
+                                </div>`
+                            },
+                            {
+                                id: "sidebar-right-ad-2",
+                                code: `<div class="sidebar-ad">
+                                    <h3>Resume Builder</h3>
+                                    <p>Create a professional resume in minutes with our easy-to-use tool.</p>
+                                    <a href="#" class="btn btn-primary">Try Now</a>
                                 </div>`
                             }
                         ]
@@ -1538,6 +1497,50 @@
             };
         }
 
+        // Show home view
+        function showHomeView() {
+            homeView.style.display = 'block';
+            detailView.style.display = 'none';
+            breadcrumb.style.display = 'none';
+            document.title = `${siteConfig.siteName} - Opportunity Portal`;
+            
+            displayOpportunities(filteredOpportunities);
+            generateTags();
+            loadAds();
+            loadSponsoredContent();
+        }
+
+        // Show detail view
+        function showDetailView(opportunityId) {
+            homeView.style.display = 'none';
+            detailView.style.display = 'block';
+            breadcrumb.style.display = 'block';
+            
+            const opportunity = opportunitiesData.opportunities.find(opp => opp.id == opportunityId);
+            
+            if (!opportunity) {
+                detailContent.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Opportunity Not Found</h3>
+                        <p>The opportunity you are looking for does not exist.</p>
+                        <a href="#" class="btn btn-primary nav-home">Back to Opportunities</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Update page title and meta tags
+            document.title = `${opportunity.title} | ${siteConfig.siteName}`;
+            breadcrumbOpportunityName.textContent = opportunity.title;
+            
+            // Render the detail page
+            renderOpportunityDetail(opportunity);
+            
+            // Load detail page ads
+            loadDetailAds();
+        }
+
         // Display opportunities in the grid
         function displayOpportunities(opportunities) {
             if (opportunities.length === 0) {
@@ -1565,7 +1568,7 @@
                             <span class="card-deadline">Due: ${formatDate(opportunity.deadline)}</span>
                         </div>
                         <div class="card-link">
-                            <a href="${opportunity.detailsLink}" class="btn btn-outline">View Details</a>
+                            <a href="${opportunity.detailsLink}" class="btn btn-outline view-details" data-id="${opportunity.id}">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -1579,166 +1582,55 @@
             }, 100);
         }
 
-        // Load and display opportunity detail
-        async function loadOpportunityDetail() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const opportunityId = urlParams.get('id');
-            
-            if (!opportunityId) {
-                document.body.innerHTML = '<div class="container"><h1>Opportunity Not Found</h1><p>The opportunity you are looking for does not exist.</p><a href="index.html" class="btn btn-primary">Back to Opportunities</a></div>';
-                return;
-            }
-            
-            const opportunity = opportunitiesData.opportunities.find(opp => opp.id == opportunityId);
-            
-            if (!opportunity) {
-                document.body.innerHTML = '<div class="container"><h1>Opportunity Not Found</h1><p>The opportunity you are looking for does not exist.</p><a href="index.html" class="btn btn-primary">Back to Opportunities</a></div>';
-                return;
-            }
-            
-            // Update page title and meta tags
-            document.title = `${opportunity.title} | ${siteConfig.siteName}`;
-            updateMetaTags(opportunity);
-            
-            // Render the detail page
-            renderOpportunityDetail(opportunity);
-        }
-
         // Render opportunity detail page
         function renderOpportunityDetail(opportunity) {
-            const detailContainer = document.createElement('div');
-            detailContainer.className = 'opportunity-detail';
-            
-            detailContainer.innerHTML = `
-                <div class="breadcrumb">
-                    <div class="container">
-                        <ol>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="index.html#opportunities">Opportunities</a></li>
-                            <li>${opportunity.title}</li>
-                        </ol>
+            detailContent.innerHTML = `
+                <div class="detail-header">
+                    <h1 class="detail-title">${opportunity.title}</h1>
+                    <div class="detail-meta">
+                        <div class="detail-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>${opportunity.category}</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>${opportunity.type}</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Deadline: ${formatDate(opportunity.deadline)}</span>
+                        </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="detail-container">
-                        <div class="detail-content">
-                            <div class="detail-header">
-                                <h1 class="detail-title">${opportunity.title}</h1>
-                                <div class="detail-meta">
-                                    <div class="detail-meta-item">
-                                        <i class="fas fa-tag"></i>
-                                        <span>${opportunity.category}</span>
-                                    </div>
-                                    <div class="detail-meta-item">
-                                        <i class="fas fa-briefcase"></i>
-                                        <span>${opportunity.type}</span>
-                                    </div>
-                                    <div class="detail-meta-item">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <span>Deadline: ${formatDate(opportunity.deadline)}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail-description">
-                                ${opportunity.fullDescription}
-                            </div>
-                            ${opportunity.applicationProcess ? `
-                            <div class="application-process">
-                                <h3>Application Process</h3>
-                                <p>${opportunity.applicationProcess}</p>
-                            </div>
-                            ` : ''}
-                            <div class="detail-actions">
-                                <a href="#" class="btn btn-primary">Apply Now</a>
-                                ${opportunity.contactEmail ? `<a href="mailto:${opportunity.contactEmail}" class="btn btn-outline">Contact</a>` : ''}
-                            </div>
-                            <div class="share-buttons">
-                                <span>Share this opportunity:</span>
-                                <a href="#" class="share-btn" onclick="shareOnFacebook('${window.location.href}', '${opportunity.title}')">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="share-btn" onclick="shareOnTwitter('${window.location.href}', '${opportunity.title}')">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="share-btn" onclick="shareOnLinkedIn('${window.location.href}', '${opportunity.title}')">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="share-btn" onclick="copyToClipboard('${window.location.href}')">
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="detail-sidebar">
-                            ${loadDetailAds()}
-                            ${loadSponsoredContentForDetail()}
-                        </div>
-                    </div>
+                <div class="detail-description">
+                    ${opportunity.fullDescription}
+                </div>
+                ${opportunity.applicationProcess ? `
+                <div class="application-process">
+                    <h3>Application Process</h3>
+                    <p>${opportunity.applicationProcess}</p>
+                </div>
+                ` : ''}
+                <div class="detail-actions">
+                    <a href="#" class="btn btn-primary">Apply Now</a>
+                    ${opportunity.contactEmail ? `<a href="mailto:${opportunity.contactEmail}" class="btn btn-outline">Contact</a>` : ''}
+                </div>
+                <div class="share-buttons">
+                    <span>Share this opportunity:</span>
+                    <a href="#" class="share-btn" onclick="shareOnFacebook('${window.location.href}', '${opportunity.title}')">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="share-btn" onclick="shareOnTwitter('${window.location.href}', '${opportunity.title}')">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="share-btn" onclick="shareOnLinkedIn('${window.location.href}', '${opportunity.title}')">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="share-btn" onclick="copyToClipboard('${window.location.href}')">
+                        <i class="fas fa-link"></i>
+                    </a>
                 </div>
             `;
-            
-            document.body.appendChild(detailContainer);
-        }
-
-        // Update meta tags for SEO
-        function updateMetaTags(opportunity) {
-            // Update or create meta tags
-            let metaDescription = document.querySelector('meta[name="description"]');
-            if (!metaDescription) {
-                metaDescription = document.createElement('meta');
-                metaDescription.name = "description";
-                document.head.appendChild(metaDescription);
-            }
-            metaDescription.content = opportunity.shortDescription;
-
-            // Open Graph tags
-            let ogTitle = document.querySelector('meta[property="og:title"]');
-            if (!ogTitle) {
-                ogTitle = document.createElement('meta');
-                ogTitle.setAttribute('property', 'og:title');
-                document.head.appendChild(ogTitle);
-            }
-            ogTitle.content = opportunity.title;
-
-            let ogDescription = document.querySelector('meta[property="og:description"]');
-            if (!ogDescription) {
-                ogDescription = document.createElement('meta');
-                ogDescription.setAttribute('property', 'og:description');
-                document.head.appendChild(ogDescription);
-            }
-            ogDescription.content = opportunity.shortDescription;
-
-            let ogUrl = document.querySelector('meta[property="og:url"]');
-            if (!ogUrl) {
-                ogUrl = document.createElement('meta');
-                ogUrl.setAttribute('property', 'og:url');
-                document.head.appendChild(ogUrl);
-            }
-            ogUrl.content = window.location.href;
-
-            // Twitter Card tags
-            let twitterCard = document.querySelector('meta[name="twitter:card"]');
-            if (!twitterCard) {
-                twitterCard = document.createElement('meta');
-                twitterCard.name = "twitter:card";
-                document.head.appendChild(twitterCard);
-            }
-            twitterCard.content = "summary";
-
-            let twitterTitle = document.querySelector('meta[name="twitter:title"]');
-            if (!twitterTitle) {
-                twitterTitle = document.createElement('meta');
-                twitterTitle.name = "twitter:title";
-                document.head.appendChild(twitterTitle);
-            }
-            twitterTitle.content = opportunity.title;
-
-            let twitterDescription = document.querySelector('meta[name="twitter:description"]');
-            if (!twitterDescription) {
-                twitterDescription = document.createElement('meta');
-                twitterDescription.name = "twitter:description";
-                document.head.appendChild(twitterDescription);
-            }
-            twitterDescription.content = opportunity.shortDescription;
         }
 
         // Load ads based on configuration
@@ -1746,22 +1638,41 @@
             // Load hero banner ad
             if (adsConfig.enabled && adsConfig.adUnits.heroBanner.enabled) {
                 heroBannerAd.innerHTML = adsConfig.adUnits.heroBanner.code;
+                heroBannerAd.classList.remove('hidden');
+            } else {
+                heroBannerAd.classList.add('hidden');
             }
 
-            // Load sidebar ads
-            if (adsConfig.enabled && adsConfig.adUnits.sidebar.enabled) {
+            // Load left sidebar ads
+            if (adsConfig.enabled && adsConfig.adUnits.sidebarLeft.enabled) {
                 let sidebarAdsHTML = '';
-                adsConfig.adUnits.sidebar.ads.forEach(ad => {
+                adsConfig.adUnits.sidebarLeft.ads.forEach(ad => {
                     sidebarAdsHTML += ad.code;
                 });
-                sidebar.innerHTML = sidebarAdsHTML;
+                sidebarLeft.innerHTML = sidebarAdsHTML;
+                sidebarLeft.classList.remove('hidden');
+            } else {
+                sidebarLeft.classList.add('hidden');
+            }
+
+            // Load right sidebar ads
+            if (adsConfig.enabled && adsConfig.adUnits.sidebarRight.enabled) {
+                let sidebarAdsHTML = '';
+                adsConfig.adUnits.sidebarRight.ads.forEach(ad => {
+                    sidebarAdsHTML += ad.code;
+                });
+                sidebarRight.innerHTML = sidebarAdsHTML;
+                sidebarRight.classList.remove('hidden');
+            } else {
+                sidebarRight.classList.add('hidden');
             }
         }
 
         // Load ads for detail page
         function loadDetailAds() {
             if (!adsConfig.enabled || !adsConfig.adUnits.opportunityDetail.enabled) {
-                return '';
+                detailSidebar.innerHTML = '';
+                return;
             }
 
             let adsHTML = '<div class="ad-section">';
@@ -1769,7 +1680,7 @@
                 adsHTML += ad.code;
             });
             adsHTML += '</div>';
-            return adsHTML;
+            detailSidebar.innerHTML = adsHTML;
         }
 
         // Load sponsored content
@@ -1790,28 +1701,8 @@
             });
 
             if (sponsoredHTML) {
-                sidebar.innerHTML += sponsoredHTML;
+                sidebarRight.innerHTML += sponsoredHTML;
             }
-        }
-
-        // Load sponsored content for detail page
-        function loadSponsoredContentForDetail() {
-            if (!sponsoredContent.enabled) return '';
-
-            let sponsoredHTML = '';
-            sponsoredContent.items.forEach(item => {
-                if (item.placement.includes('detail')) {
-                    sponsoredHTML += `
-                        <div class="sidebar-ad sponsored-content">
-                            <h3>${item.title}</h3>
-                            <p>${item.description}</p>
-                            <a href="${item.link}" class="btn btn-primary">${item.buttonText}</a>
-                        </div>
-                    `;
-                }
-            });
-
-            return sponsoredHTML;
         }
 
         // Generate tags from opportunities data
@@ -2001,6 +1892,39 @@
             if (footerForm) {
                 handleFormSubmit(footerForm, footerMessage, false);
             }
+
+            // View details buttons
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('view-details')) {
+                    e.preventDefault();
+                    const opportunityId = e.target.getAttribute('data-id');
+                    // Update URL without page reload
+                    window.history.pushState({}, '', `?id=${opportunityId}`);
+                    showDetailView(opportunityId);
+                }
+            });
+
+            // Home navigation
+            navHomeLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Update URL without page reload
+                    window.history.pushState({}, '', window.location.pathname);
+                    showHomeView();
+                });
+            });
+
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const opportunityId = urlParams.get('id');
+                
+                if (opportunityId) {
+                    showDetailView(opportunityId);
+                } else {
+                    showHomeView();
+                }
+            });
         }
 
         // Initialize the application when DOM is loaded

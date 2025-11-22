@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Portal | Discover Your Future</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* --- CSS Variables & Reset --- */
+:root {
+    --primary-blue: #0f172a; /* Deep Navy */
+    --secondary-blue: #1e293b; /* Lighter Navy for cards/footer */
+    --accent-gold: #fbbf24; /* Bright Gold */
+    --accent-gold-hover: #d97706;
+    --text-dark: #334155;
+    --text-light: #f8fafc;
+    --bg-light: #f1f5f9;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Layout Utility --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.logo span {
+    color: var(--accent-gold);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* --- Hero Section (Search & Tags) --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+/* --- Dynamic Tags --- */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.tag:hover, .tag.active {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    border-color: var(--accent-gold);
+    font-weight: 600;
+}
+
+/* --- Opportunities Grid --- */
+.results-section {
+    padding: 3rem 0;
+    flex-grow: 1;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Card Design --- */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--accent-gold);
+}
+
+/* Card Image Area */
+.card-img-container {
+    height: 160px;
+    width: 100%;
+    background-color: var(--secondary-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* Fallback Image Placeholder */
+.card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--primary-blue), #334155);
+    color: var(--accent-gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Card Content */
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Pushes footer down */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.deadline {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.deadline i {
+    margin-right: 5px;
+    color: var(--accent-gold-hover);
+}
+
+.btn-details {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-details:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 3rem 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.subscribe-form button {
+    background-color: var(--accent-gold);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-blue);
+    transition: var(--transition);
+}
+
+.subscribe-form button:hover {
+    background-color: white;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-gold);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+}
+
+.footer-bottom {
+    background-color: var(--secondary-blue);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+    font-size: 1.2rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-globe"></i> Opps<span>Portal</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Find Your Next Big Opportunity</h1>
+                <p>Explore jobs, scholarships, and events curated for excellence.</p>
+                
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Search by title, keyword, or description...">
+                </div>
+
+                <div id="tagsContainer" class="tags-container">
+                    <button class="tag active" data-tag="all">All</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+                <div id="opportunitiesGrid" class="opportunities-grid">
+                    <div class="loading-state">Loading opportunities...</div>
+                </div>
+                <div id="noResults" class="no-results hidden">
+                    <i class="fa-regular fa-folder-open"></i>
+                    <p>No opportunities found matching your criteria.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest alerts.</p>
+                <form class="subscribe-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Opportunity Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    // script.js
+
+// --- 1. MOCKED DATA (Simulating an External JSON Endpoint) ---
+// In a real app, this would be fetched via fetch('api/opportunities.json')
+const mockData = [
+    {
+        id: 1,
+        title: "Senior Frontend Developer",
+        category: "Job",
+        image: "https://images.unsplash.com/photo-1593642632823-8f78536788c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        description: "We are looking for an experienced developer to lead our frontend team. Expertise in React and modern CSS required.",
+        deadline: "2023-12-31",
+        link: "#"
+    },
+    {
+        id: 2,
+        title: "Global Excellence Scholarship",
+        category: "Scholarship",
+        image: "", // Intentionally empty to test placeholder
+        description: "Full funding for master's students demonstrating academic excellence and leadership potential.",
+        deadline: "2024-01-15",
+        link: "#"
+    },
+    {
+        id: 3,
+        title: "Tech Innovation Summit 2024",
+        category: "Event",
+        image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        description: "Join industry leaders for a 3-day summit exploring the future of AI and sustainable tech.",
+        deadline: "2023-11-20",
+        link: "#"
+    },
+    {
+        id: 4,
+        title: "Marketing Internship",
+        category: "Internship",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        description: "A 3-month paid internship for creative minds interested in digital marketing strategies.",
+        deadline: "2023-12-01",
+        link: "#"
+    },
+    {
+        id: 5,
+        title: "Data Science Bootcamp",
+        category: "Education",
+        image: "", 
+        description: "Intensive 12-week program to master Python, SQL, and Machine Learning basics.",
+        deadline: "2024-02-10",
+        link: "#"
+    },
+    {
+        id: 6,
+        title: "UX/UI Designer",
+        category: "Job",
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        description: "Create intuitive user experiences for our global banking app users.",
+        deadline: "2023-12-15",
+        link: "#"
+    }
+];
+
+// --- 2. DOM ELEMENTS ---
+const gridContainer = document.getElementById('opportunitiesGrid');
+const tagsContainer = document.getElementById('tagsContainer');
+const searchInput = document.getElementById('searchInput');
+const noResultsMsg = document.getElementById('noResults');
+
+// --- 3. STATE MANAGEMENT ---
+let allOpportunities = [];
+let currentCategory = 'all';
+let searchQuery = '';
+
+// --- 4. INITIALIZATION & ASYNC FETCH ---
+document.addEventListener('DOMContentLoaded', () => {
+    fetchOpportunities();
+});
+
+async function fetchOpportunities() {
+    // Simulate network delay
+    try {
+        const data = await new Promise((resolve) => {
+            setTimeout(() => resolve(mockData), 800); // 800ms artificial delay
+        });
+        
+        allOpportunities = data;
+        
+        // Initialize UI
+        generateTags(allOpportunities);
+        renderCards(allOpportunities);
+        
+    } catch (error) {
+        gridContainer.innerHTML = `<p style="color:red; text-align:center;">Failed to load data. Please try again later.</p>`;
+        console.error("Error fetching data:", error);
+    }
+}
+
+// --- 5. CORE FUNCTIONS ---
+
+// Generate Filter Tags based on data
+function generateTags(data) {
+    const categories = new Set(data.map(item => item.category));
+    
+    // Clear existing tags except 'All'
+    tagsContainer.innerHTML = `<button class="tag active" data-tag="all">All</button>`;
+    
+    categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'tag';
+        btn.textContent = cat;
+        btn.dataset.tag = cat;
+        btn.addEventListener('click', handleTagClick);
+        tagsContainer.appendChild(btn);
+    });
+
+    // Add event listener to the 'All' tag
+    tagsContainer.querySelector('[data-tag="all"]').addEventListener('click', handleTagClick);
+}
+
+// Handle Tag Selection
+function handleTagClick(e) {
+    // Remove active class from all tags
+    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+    // Add active class to clicked tag
+    e.target.classList.add('active');
+    
+    currentCategory = e.target.dataset.tag;
+    filterData();
+}
+
+// Filter Data Logic (Search + Category)
+function filterData() {
+    const filtered = allOpportunities.filter(item => {
+        // 1. Check Category
+        const matchCategory = currentCategory === 'all' || item.category === currentCategory;
+        
+        // 2. Check Search Query (Case insensitive)
+        const q = searchQuery.toLowerCase();
+        const matchSearch = item.title.toLowerCase().includes(q) || 
+                           item.description.toLowerCase().includes(q);
+        
+        return matchCategory && matchSearch;
+    });
+    
+    renderCards(filtered);
+}
+
+// Render HTML Cards
+function renderCards(data) {
+    gridContainer.innerHTML = ''; // Clear current grid
+
+    if (data.length === 0) {
+        noResultsMsg.classList.remove('hidden');
+        return;
+    } else {
+        noResultsMsg.classList.add('hidden');
+    }
+
+    data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        // Determine visual header (Image vs Placeholder)
+        let imageHTML = '';
+        if (item.image) {
+            imageHTML = `<img src="${item.image}" alt="${item.title}" class="card-img">`;
+        } else {
+            imageHTML = `<div class="card-placeholder">${item.title}</div>`;
+        }
+
+        // Calculate days remaining for urgency styling (Optional logic)
+        const daysLeft = getDaysLeft(item.deadline);
+        const urgencyClass = daysLeft < 7 ? 'style="color: #ef4444; font-weight:bold;"' : '';
+
+        card.innerHTML = `
+            <div class="card-img-container">
+                ${imageHTML}
+            </div>
+            <div class="card-body">
+                <div class="card-category">${item.category}</div>
+                <h3 class="card-title">${item.title}</h3>
+                <p class="card-desc">${item.description}</p>
+                
+                <div class="card-footer">
+                    <span class="deadline" ${urgencyClass}>
+                        <i class="fa-regular fa-clock"></i> ${item.deadline}
+                    </span>
+                    <a href="${item.link}" class="btn-details">Details Link</a>
+                </div>
+            </div>
+        `;
+        
+        gridContainer.appendChild(card);
+    });
+}
+
+// --- 6. UTILITIES & LISTENERS ---
+
+// Search Input Listener
+searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value;
+    filterData();
+});
+
+// Helper to calculate date difference
+function getDaysLeft(deadlineStr) {
+    const deadline = new Date(deadlineStr);
+    const today = new Date();
+    const diffTime = deadline - today;
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+    <script>
+
+      
+    </script>
+</body>
+</html>

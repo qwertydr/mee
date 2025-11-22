@@ -2281,21 +2281,6 @@
       "contactEmail": "volunteers@ohsu.edu"
     },
     {
-      "id": 154,
-      "title": "LINC Summer High School Program",
-      "description": "Six-week program focused on service learning and conservation in local communities and parklands.",
-      "shortDescription": "Conservation and service learning with education award.",
-      "deadline": "2025-03-31",
-      "category": "Service Program",
-      "type": "Conservation",
-      "imageUrl": "",
-      "detailsLink": "?id=154",
-      "slug": "linc-summer-program",
-      "fullDescription": "<p>This six-week program for high school students is focused on service learning and conservation. Projects may include habitat restoration, career development, leadership workshop, and technical job skills.</p><h3>Responsibilities:</h3><ul><li>Participate in habitat restoration</li><li>Develop technical job and leadership skills</li><li>Practice iNaturalist and citizen science</li></ul><h3>Requirements:</h3><ul><li>High school student</li><li>Interest in conservation</li></ul><h3>What We Offer:</h3><ul><li>Up to \$2300 education award (AmeriCorps)</li><li>Career development</li><li>Hands-on conservation work</li></ul>",
-      "applicationProcess": "Application via local AmeriCorps/Conservation websites.",
-      "contactEmail": "linc@conservationlegacy.org"
-    },
-    {
       "id": 155,
       "title": "USDA Student Intern Program",
       "description": "Gains valuable professional experience as assistants in scientific, professional, technical, and/or administrative areas.",
